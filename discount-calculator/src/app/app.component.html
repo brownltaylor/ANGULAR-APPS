@@ -1,0 +1,21 @@
+<h1>{{ title }}</h1>
+
+<div>
+<label>Total Bill: 
+
+<sup>$</sup><input type="number" [value]="totalBill" (input)="totalBill = $event.target.value" />
+</label>
+<br>
+<label>Tip Percentage: 
+  <input type="number" [value]="tip" (input)="tip = $event.target.value"/>  %
+</label>
+<br>
+<button id='submit' (click)="calculateTip()">Calculate!</button>
+<br>
+
+Tip Amount: <sup>$</sup><span id="tipAmount">{{tipAmount}}</span>
+<br>
+Total: <sup>$</sup><span id="total">{{total}}</span>
+  
+</div>
+<router-outlet></router-outlet>
